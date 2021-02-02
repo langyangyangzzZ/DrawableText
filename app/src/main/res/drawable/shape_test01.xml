@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <!--
+         shape参数介绍:
+            rectangle （矩形，不写默认是矩形）
+            oval （椭圆）
+            line （线）
+            ring（环）注:使用ring属性时候必须设置 android:useLevel="false"
+    -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+
+    <!--
+        圆角
+        corners参数介绍:
+            android:radius（radius属性是对四个角都起作用的）
+            android:topLeftRadius（左上角）
+            android:topRightRadius（右上角）
+            android:bottomLeftRadius （左下角）
+            android:bottomRightRadius（右下角）
+
+            注意:只有在android:shape=”rectangle”时起作用
+            -->
+    <corners android:radius="5dp"
+        android:bottomLeftRadius="5dp"
+        android:topLeftRadius="50dp"
+        android:bottomRightRadius="50dp"
+        android:topRightRadius="5dp"
+        />
+
+    <!--
+        边缘填充
+            stroke参数介绍:
+                android:width，     表示的是线的粗细。
+                android:color，     表示的是线的颜色。
+                android:dashGap，   表示是一条虚线，gap表明的是虚线中线与线间的空隙。
+                android:dashWidth， 表示的是虚线中线的长度，只有设置了dashGap来画一条虚线，
+                                    这个属性值才能起作用。
+     -->
+    <stroke
+        android:width="10dp"
+        android:dashGap="3dp"
+        android:dashWidth="3dp"
+        android:color="@color/teal_700" />
+
+        <!--
+        内填充
+            solid参数介绍:
+             android:color 设置填充颜色
+        -->
+        <solid android:color="@color/black"/>
+
+    <!--
+        内边距  就跟我们平常认识的padding一样效果
+            padding参数介绍:
+              padding支持四个属性，分别是
+                    left,
+                    right,
+                    top
+                    bottom。
+        -->
+    <padding
+        android:top="20dp"
+        android:left="10dp"
+        android:bottom="0dp"
+        android:right="0dp"/>
+
+    <!--
+        size参数介绍:
+            width height 是 drawable 的大小
+     -->
+    <size android:width="200dp"
+        android:height="100dp"/>
+
+        <!--
+         渐变
+            gradient参数介绍:
+            - android:startColor（渐变起始颜色）
+            - android:endColor（渐变终止颜色）
+            - android:centerColor（渐变中间颜色）
+            - android:angle（渐变方向逆时针旋转的角度，必须是45的倍数，否则会报错）
+            - android:centerX（中间的颜色相对的位置，X就只对左右的渐变有用，0~1.0）
+            - android:centerY（中间的颜色相对的位置，Y就只对上下的渐变有用，0~1.0）
+            - android:gradientRadius（raidal渐变半径）
+            - android:type（渐变类型，有”linear”、”radial”和”sweep”）
+        -->
+    <gradient android:useLevel="false"
+         android:startColor="@color/teal_200"
+        android:centerColor="@color/white"
+        android:endColor="@color/black"
+        android:angle="45"
+        android:centerX="0.5"
+        android:gradientRadius="20dp"
+        android:type="linear"/>
+
+</shape>

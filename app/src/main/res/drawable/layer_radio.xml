@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--选中-->
+    <item android:state_checked="true">
+        <layer-list>
+            <item >
+                <color android:color="@color/teal_700"/>
+            </item>
+
+            <!-- 白色距离底部6dp -->
+            <item android:bottom="4dp">
+                <color android:color="#fff"/>
+            </item>
+        </layer-list>
+    </item>
+
+
+    <!--未选中-->
+    <item android:state_checked="false">
+        <layer-list>
+            <item>
+              <color android:color="@color/teal_700"/>
+            </item>
+
+            <!-- 白色距离底部2dp -->
+            <item android:bottom="2dp">
+                <color android:color="#fff"/>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

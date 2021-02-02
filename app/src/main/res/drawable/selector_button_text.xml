@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+       参数介绍:
+           android:state_selected是选中   只能用于单选按钮场景
+           android:state_focused是获得焦点
+           android:state_pressed是点击
+           android:state_enabled是设置是否响应事件,指所有事件
+   -->
+
+    <!--点击 -->
+    <item android:state_pressed="true" >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/black"/>
+            <stroke android:color="@color/teal_700" android:width="2dp"/>
+            <corners android:bottomLeftRadius="20dp"
+                    android:topRightRadius="20dp"
+                />
+        </shape>
+    </item>
+
+    <!--未点击 -->
+    <item android:state_pressed="false" >
+        <shape android:shape="rectangle">
+            <solid android:color="@color/black"/>
+            <stroke android:color="@color/teal_700" android:width="5dp"/>
+            <corners android:bottomRightRadius="20dp"
+                android:topLeftRadius="20dp"
+                />
+        </shape>
+    </item>
+
+</selector>

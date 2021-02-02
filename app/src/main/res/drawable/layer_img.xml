@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--图层一 -->
+    <!--默认是缩放效果 android:gravity="center" 为不缩放-->
+    <item android:gravity="center">
+
+        <!--
+        常用参数介绍:
+            bitmap 设置图片
+            rotate 旋转
+        -->
+        <bitmap android:src="@mipmap/log" />
+
+    </item>
+
+    <!--图层二 -->
+    <item
+        android:gravity="center"
+        android:left="100dp"
+        android:top="100dp">
+        <bitmap android:src="@mipmap/log" />
+    </item>
+
+    <!--图层三 -->
+    <item
+        android:gravity="center"
+        android:left="200dp"
+        android:top="200dp">
+        <bitmap android:src="@mipmap/log" />
+    </item>
+
+</layer-list>
